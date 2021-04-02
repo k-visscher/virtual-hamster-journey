@@ -1,0 +1,15 @@
+FROM debian:buster
+
+RUN DEBIAN_FRONTEND=noninteractive \
+		apt update \
+		&& apt upgrade -y \
+		&& apt install -y wget apt-utils default-jre \
+		&& wget -q "https://github.com/hivemq/mqtt-cli/releases/download/v4.5.1/mqtt-cli-4.5.1.deb" \
+		&& dpkg -i mqtt-cli-4.5.1.deb \
+		&& rm mqtt-cli-4.5.1.deb
+
+WORKDIR /script
+COPY ./emulate.sh ./
+RUN chmod +x ./emulate.sh
+
+ENTRYPOINT ./emulate.sh

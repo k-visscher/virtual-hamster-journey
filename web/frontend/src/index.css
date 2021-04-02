@@ -1,0 +1,49 @@
+.map {
+	width: 100%;
+	height: 100%;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#journey-information-container {
+	position: fixed;
+	left: 0.5em;
+	bottom: 0.5em;
+	font-family: 'Montserrat', sans-serif;
+	color: #ffffff;
+	background-color: #6d6d6d;
+	border-radius: 5%;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.ol-control button {
+	background-color: #6D6D6D !important;
+}
+
+#focus-route-button {
+	right: 0.5em;
+	bottom: 0.5em;
+	position: fixed;
+}
+
+#focus-hamster-button {
+	right: 160px;
+	bottom: 0.5em;
+	position: fixed;
+}
+
+.github-fork-ribbon:before {
+	background-color: #6d6d6d !important;
+	font: 700 1em Montserrat,sans-serif !important;
+}
+
+.github-fork-ribbon:after {
+	background-color: #6d6d6d !important;
+	font: 700 1em Montserrat,sans-serif !important;
+}

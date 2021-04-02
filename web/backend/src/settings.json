@@ -1,0 +1,11 @@
+{
+  "wheel": {
+		"diamaterInMeters": 0.29
+  },
+	"connections": {
+		"mqtt": "mqtt://mqtt-server"
+	},
+	"server": {
+		"port": 8080
+	}
+}

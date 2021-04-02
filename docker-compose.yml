@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  web-server:
+    build:
+      context: ./web
+      dockerfile: Dockerfile.amd64
+    ports:
+      - "8080:8080"
+  mqtt-server:
+    image: eclipse-mosquitto
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mqtt/mosquitto.conf:/mosquitto/config/mosquitto.conf
+  esp32-client:
+    build:
+      context: ./esp32/test
+      dockerfile: Dockerfile.amd64

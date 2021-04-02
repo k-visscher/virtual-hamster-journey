@@ -1,0 +1,13 @@
+**/.cache/
+**/.parcel-cache/
+
+**/res/*.sqlite3
+**/node_modules/
+
+.dockerignore
+.DS_Store
+
+**/public/*.js
+**/public/*.html
+**/public/*.css
+**/public/*.map

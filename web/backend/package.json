@@ -1,0 +1,23 @@
+{
+  "name": "virtual-hamster-journey-backend",
+  "version": "1.0.0",
+  "description": "The backend for the virtual hamster journey",
+  "author": "Kim Visscher",
+  "license": "MIT",
+  "repository": "https://github.com/K-Visscher/virtual-hamster-journey",
+  "scripts": {
+    "start": "node src/index.js",
+    "clean": "rm public/*.js && rm public/*.html && rm public/.png && rm public/*.css && rm public/*.map"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "luxon": "^1.25.0",
+    "mqtt": "^4.2.6",
+    "sequelize": "^6.5.0",
+    "sqlite3": "^5.0.1",
+    "ws": "^7.4.2"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
+  }
+}

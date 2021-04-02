@@ -1,0 +1,36 @@
+{
+	"name": "virtual-hamster-journey-frontend",
+	"version": "1.0.0",
+	"description": "The frontend for the virtual hamster journey",
+	"author": "Kim Visscher",
+	"license": "MIT",
+	"repository": "https://github.com/K-Visscher/virtual-hamster-journey",
+	"dependencies": {
+		"axios": "^0.21.1",
+		"geodesy": "^2.2.1",
+		"github-fork-ribbon-css": "^0.2.3",
+		"ol": "^6.5.0",
+		"xml2js": "^0.4.23"
+	},
+	"devDependencies": {
+		"@parcel/optimizer-cssnano": "2.0.0-nightly.609",
+		"@parcel/optimizer-htmlnano": "2.0.0-nightly.609",
+		"@parcel/packager-css": "2.0.0-nightly.609",
+		"@parcel/packager-html": "2.0.0-nightly.609",
+		"@parcel/packager-js": "2.0.0-nightly.609",
+		"@parcel/transformer-babel": "2.0.0-nightly.609",
+		"@parcel/transformer-css": "2.0.0-nightly.609",
+		"@parcel/transformer-html": "2.0.0-nightly.609",
+		"@parcel/transformer-image": "2.0.0-nightly.2231",
+		"@parcel/transformer-postcss": "2.0.0-nightly.609",
+		"@parcel/transformer-posthtml": "2.0.0-nightly.609",
+		"parcel": "2.0.0-nightly.607"
+	},
+	"scripts": {
+		"clean": "rm ../backend/public/*.js && rm ../backend/public/*.html &&  rm ../backend/public/*.png && rm ../backend/public/*.css && rm ../backend/public/*.map",
+		"dev": "npm run development",
+		"development": "parcel build --no-autoinstall --dist-dir ../backend/public --public-url . src/index.html",
+		"prod": "npm run production",
+		"production": "parcel build --no-autoinstall --no-source-maps --public-url . src/index.html"
+	}
+}

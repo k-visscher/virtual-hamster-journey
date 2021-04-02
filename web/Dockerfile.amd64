@@ -1,0 +1,32 @@
+FROM amd64/node:14.15.5-buster-slim AS build
+
+RUN DEBIAN_FRONTEND=noninteractive \
+		apt update \
+		&& apt upgrade --assume-yes \
+		&& apt install --assume-yes --no-install-recommends \
+		   python \
+       build-essential
+
+WORKDIR /usr/src/app
+COPY backend/package.json ./backend/
+COPY frontend/package.json ./frontend/
+
+WORKDIR /usr/src/app/backend
+RUN npm install
+COPY backend .
+
+WORKDIR /usr/src/app/frontend
+RUN npm install
+COPY frontend .
+RUN npm run production
+
+FROM amd64/node:14.15.5-buster-slim AS final
+ENV NODE_ENV production
+
+WORKDIR /usr/src/app/
+
+COPY --from=build /usr/src/app/backend/ .
+COPY --from=build /usr/src/app/frontend/dist/ ./public/
+
+ENTRYPOINT ["node"]
+CMD ["src/index.js"]
