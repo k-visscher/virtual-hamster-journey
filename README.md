@@ -4,6 +4,12 @@ This repository contains code that one can use to make a "virtual hamster journe
 
 ![example image of the appliction](./virtual-hamster-journey.png)
 
+![fluffbutt himself](https://user-images.githubusercontent.com/13816979/114072479-9c56f300-98a2-11eb-89f1-d72fff6d715f.jpeg)
+
+![fluffbutt running](https://user-images.githubusercontent.com/13816979/114072378-7fbabb00-98a2-11eb-91a4-f7b4d179f86f.mp4)
+
+![wheel_example](https://user-images.githubusercontent.com/13816979/114072317-6f0a4500-98a2-11eb-9be9-d166413d0c33.mp4) 
+
 ## Web Application
 The web application shows the shows the current location of your hamster and how far along their journey they are.
 The virtual route your hamster will travel is determined by the following file [route.gpx](./web/backend/public/route.gpx), you can replace this file by any desired GPX file as long as it contains at least one (valid) track.
