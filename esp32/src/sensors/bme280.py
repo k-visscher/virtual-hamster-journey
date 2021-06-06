@@ -1,4 +1,4 @@
-# I (Kim Visscher) have taken and adapted the following code from here:
+# code was taken from here:
 # https://github.com/robert-hh/BME280/blob/master/bme280_float.py
 #
 # Updated 2018 and 2020
@@ -167,7 +167,7 @@ class BME280:
         result[1] = raw_press
         result[2] = raw_hum
 
-    def data(self, result=None):
+    def read(self, result=None):
         """Reads the data from the sensor and returns the compensated data.
 
         Args:
